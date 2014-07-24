@@ -24,7 +24,7 @@ MakeCurrentFriends = ->(sender, recipient) {
 }
 
 MakeOldFriends = ->(sender, recipient) {
-  [18, 20, 22, 24, 26, 28].each do |weeks_ago|
+  [18, 20, 22, 24, 26, 28, 30, 32].each do |weeks_ago|
     original = CreateEmail.(sender, recipient, 7*weeks_ago)
     CreateEmail.(recipient, sender, 7*(weeks_ago - 1), original)
   end
